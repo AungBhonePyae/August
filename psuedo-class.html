@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo</title>
+    <style>
+        a{
+            transition: all .5s;
+            
+        }
+        a:visited{
+            color: gold;
+        }
+        a:hover{
+            color: brown;
+            cursor: move;
+            display: inline-block;
+            transform: scale(1.2);
+        }
+        button:active{
+            background-color: aquamarine;
+        }
+        h3:visited{
+            color: red;
+        }
+        h3:hover{
+            color: blueviolet;
+            cursor: pointer;
+        }
+        
+        li:first-child{
+            color: rebeccapurple;
+        }
+        li:last-child{
+            color: brown;
+        }
+        li:nth-child(3){
+            color: aquamarine;
+        }
+        input:focus{
+            color: blue;
+            outline: 0;
+        }
+        li:nth-child(2n+1){
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Home</a>
+    <button>Click me</button>
+    <p>Aung Bhone Pyae</p>
+   <a href="font.html">Font</a>
+   <a href="#">Position</a>
+   <a href="embed.html">
+    <h3>Name and Age</h3>
+   </a>
+   <a href="">
+    <h3>Google</h3>
+   </a>
+   
+    
+
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+
+    </ul>
+
+    <input type="text" placeholder="Enter Name">
+</body>
+</html>
