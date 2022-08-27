@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM6</title>
+</head>
+<body>
+    <ul></ul>
+
+    <script>
+        const fruits=["apple","oreange","mango","grapes"]
+        const ul=document.querySelector("ul");
+        fruits.forEach(function(i){
+            const li=document.createElement("li");
+            ul.append(li);
+            li.append(i);
+        })
+        
+    </script>
+    
+</body>
+</html>

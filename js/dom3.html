@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3</title>
+</head>
+<body>
+    <h1>HI</h1>
+    <p>Lorem ipsum dolor sit
+        <strong> amet consectetur, adipisicing elit.</strong> Aperiam architecto temporibus id omnis iure sapiente nostrum? Est ab sint magni voluptatibus, <u> ex deleniti enim distinctio,</u> laborum ipsa quisquam ducimus.</p>
+    
+        <script>
+            const p=document.querySelector("p");
+            // inner HTML
+            console.log("innerHTML",p.innerHTML);
+            // innerText
+            console.log("innerText",p.innerText);
+            // innerContent
+            console.log("textContent",p.textContent);
+
+            const heading=document.querySelector("h1");
+            // heading.innerText="<em>Hello</em>";
+            heading.innerHTML="<em>Hello</em>";
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+
+    <h2 id="sub-title">Sub Title</h2>
+    
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit quibusdam iusto blanditiis suscipit molestias possimus enim, doloremque pariatur repellendus quidem deleniti, nisi inventore nobis mollitia ipsam. Beatae, optio harum?</p>
+    <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur dolorum vero commodi repellat libero, nemo, voluptas quos sunt suscipit totam voluptatem laudantium saepe aliquam, enim distinctio deleniti unde labore.
+    </p>
+
+
+    <script>
+        console.log(document.getElementsByTagName("h1"));
+        console.log(document.getElementsByClassName("para"));
+        console.log(document.getElementById("sub-title"));
+
+        console.log(document.querySelector("h1"));
+        console.log(document.querySelector(".para"));
+        console.log(document.querySelectorAll("h1"));
+        console.log(document.querySelector("#sub-title"));
+    </script>
+</body>
+</html>

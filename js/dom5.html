@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM5</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <ul></ul>
+
+    <script>
+        const head=document.querySelector("h1");
+        head.append("Welcome");
+        head.prepend("hi");
+
+        const str=document.createTextNode("Dom");
+        head.appendChild(str);
+        const str2=document.createTextNode("Another");
+        head.appendChild(str2);
+
+        const ul=document.querySelector("ul");
+        const li=document.createElement("li");
+        console.log(li)
+        ul.append(li)
+        li.append("Hello");
+    </script>
+</body>
+</html>

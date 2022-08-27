@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            box-sizing: border-box;
+        }
+        body{
+            /* background-image: url(); */
+            background-color: skyblue;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #form{
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 60vw;
+            margin: 2rem auto;
+            padding: 2rem;
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+            border-radius: .5rem;
+        }
+        #form h1{
+            margin-bottom: 1rem;
+        }
+        input{
+            width: 100%;
+            padding: 1rem;
+            background-color: transparent;
+            border: 1px solid #333;
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+            outline: 0;
+        }
+        button[type="submit"]{
+            background-color: transparent;
+            border: 1px solid #333;
+            padding: 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            width: 100%;
+
+        }
+        #btn{
+            text-align: center;
+        }
+        .error{
+            color: red;
+            padding-bottom: .5rem;
+            display: block;
+            text-transform: none;
+        }
+        input.error{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <h1>Register Form</h1>
+        <div>
+            <input type="text" id="name" placeholder="Enter name" autocomplete="off">
+            <span id="name_error" class="error"></span>
+        </div>
+        <div>
+            <input type="text" id="email" placeholder="Enter email" autocomplete="off">
+            <span id="email_error" class="error"></span>
+        </div>
+        <div>
+            <input type="password" id="password" placeholder="Enter password" autocomplete="off">
+            <span id="password_error" class="error"></span>
+        </div>
+        <div>
+            <input type="password" id="c_password" placeholder="Enter confirmed password" autocomplete="off">
+            <span id="c_password_error" class="error"></span>
+        </div>
+        <div id="btn">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+
+    <script>
+        const form=document.querySelector("#form");
+        const name=document.querySelector("#name");
+        const email=document.querySelector("#email");
+        const password=document.querySelector("#password");
+        const c_password=document.querySelector("#c_password");
+
+        const name_error=document.querySelector("#name_error");
+        const email_error=document.querySelector("#email_error");
+        const password_error=document.querySelector("#password_error");
+        const c_password_error=document.querySelector("#c_password_error");
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+
+        // if(name.value==""){
+        //     name_error.textContent="Name is required";
+        //     name.classList.add("error");
+        // }
+        // if(email.value==""){
+        //     email_error.textContent="Email is required";
+        //     email.classList.add("error");
+        // }
+        // if(password.value==""){
+        //     password_error.textContent="Password is required";
+        //     password.classList.add("error");
+        // }
+
+        // if(c_password.value==""){
+        //     c_password_error.textContent="Confirm Password is required";
+        //     c_password.classList.add("error");
+        // }
+
+        const check_empty=(input,error,msg)=>{
+            if(input.value.trim()==""){
+                error.textContent=msg;
+                input.classList.add("error");
+            }
+
+        }
+        // const check_empty=(input,error)=>{
+        //     if(input.value.trim()==''){
+
+        //     }
+        // }
+        check_empty(name,name_error,"Name is required");
+        check_empty(email,email_error,"Email is required");
+        check_empty(password,password_error,"Password is required");
+        check_empty(c_password,c_password_error,"Confirm is required");
+        if(password.value.trim()!==c_password.value.trim()){
+            c_password_error.textContent="Passwords do not match"
+        }
+        })
+        // name.addEventListener("keypress",function(){
+        //     name.classList.remove("error");
+        //     name_error.textContent="";
+        // })
+        // email.onkeypress=()=>{
+        //     email.classList.remove("error");
+        //     email_error.textContent="";
+        // }
+        // password.onkeypress=()=>{
+        //     password.classList.remove("error");
+        //     password_error.textContent="";
+        // }
+        // c_password.onkeypress=()=>{
+        //     c_password.classList.remove("error");
+        //     c_password_error.textContent="";
+        // }
+
+        const inputs=document.querySelectorAll("input");
+        inputs.forEach(input=>{
+            input.onkeypress= ()=>{
+                input.classList.remove("error");
+                input.parentElement.querySelector()
+
+            }
+        })
+
+        
+    </script>
+    
+</body>
+</html>

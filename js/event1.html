@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <button id="btn1" onclick="hello()">Button1</button>
+    <button id="btn2">Button2</button>
+    <button id="btn3">Button3</button>
+
+    <script>
+        function hello(){
+            alert("Hello");
+        }
+
+        const btn2=document.querySelector("#btn2");
+        btn2.addEventListener("click",function(){
+            console.log('btn2 is clicked');
+        })
+
+        const btn3=document.querySelector("#btn3");
+        btn3.onclick=function(){
+            console.log('btn3 is clicked')
+        }
+    </script>
+    
+</body>
+</html>
